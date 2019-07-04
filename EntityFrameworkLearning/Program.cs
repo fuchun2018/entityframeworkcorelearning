@@ -23,12 +23,12 @@ namespace EntityFrameworkLearning
                         options.UseSqlServer(configuration.GetConnectionString("DevConnection"));
                     }
                 ).BuildServiceProvider();
-            using (var context = serviceProvider.GetService<BlogContext>())
-            {
-                context.Database.EnsureCreated();
-                var tableCreator = context.Database.GetService<IDatabaseCreator>();
-                ((RelationalDatabaseCreator)tableCreator).CreateTables();
-            }
+            //using (var context = serviceProvider.GetService<BlogContext>())
+            //{
+            //    context.Database.EnsureCreated();
+            //    var tableCreator = context.Database.GetService<IDatabaseCreator>();
+            //    ((RelationalDatabaseCreator)tableCreator).CreateTables();
+            //}
         }
     }
 }
